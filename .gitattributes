@@ -1,0 +1,7 @@
+#To adapt git config you need to run next commands:
+#!!!! CHANGE DEFAULT PASS !!!
+#git config filter.openssl.clean 'openssl enc -base64 -aes-256-ecb -S 123456789 -k DEFAULT_PASS'
+#git config filter.openssl.smudge 'openssl enc -d -base64 -aes-256-ecb -k DEFAULT_PASS'
+#git config diff.openssl.textconv 'openssl enc -d -base64 -aes-256-ecb -k DEFAULT_PASS 2&>/dev/null || cat'
+* filter=openssl diff=openssl
+.git* !filter !diff
