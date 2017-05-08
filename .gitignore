@@ -1,3 +1,6 @@
 # IntelliJ Idea belongings
 .idea/
 *.iml
+
+#maven
+target/
